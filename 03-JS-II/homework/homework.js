@@ -5,7 +5,7 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if(x<y)
+  if(x>y)
   {
     return x
   }
@@ -128,7 +128,11 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if(Math.floor(numero))
+  if(Math.round(numero))
+  {
+    return true;
+  }
+  else if(numero===0)
   {
     return true;
   }
@@ -180,7 +184,7 @@ function operadoresLogicos(num1, num2, num3) {
   {
     if(num1>num2 && num1>num3 && num1>0)
     {
-      return "Numero 1 es mayor y positivo"
+      return "Número 1 es mayor y positivo"
     }
     else if(num3>num1 && num3>num2)
     {
@@ -238,7 +242,8 @@ function esVerdadero(valor){
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
+  //Escribe tu código aquí  
+  tablaSeis=new Array; 
   for (var i = 0; i <=10; i++) 
   {
        tablaSeis[i]=6*i;  
@@ -263,7 +268,7 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var cont=1;
+  var cont=0;
   do 
   {
       numero=numero+5;
