@@ -272,7 +272,7 @@ function obtenerSaludo(nombre) {
   // Tu código:
   return 'Hola ' + nombre;
 }
-obtenerSaludo('Martin')
+obtenerSaludo('Martin!')
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
