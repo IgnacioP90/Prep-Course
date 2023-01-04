@@ -30,6 +30,8 @@ function devolverString(str) {
   // Tu código:
   return str;
 }
+var hola='hola mundo';
+devolverString(hola)
 
 function suma(x, y) {
   // "x" e "y" son números
@@ -37,28 +39,36 @@ function suma(x, y) {
   // Tu código:
   return x+y;
 }
-
+var x=50;
+var y=6;
+suma(x, y);
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
   return x-y;
 }
-
+var x=10;
+var y=9;
+resta(x, y);
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
   return x*y;
 }
-
+var x=5;
+var y=8;
+multiplica(x, y);
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
   return x/y;
 }
-
+var x=4;
+var y=2;
+divide(x, y);
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
@@ -73,7 +83,9 @@ function sonIguales(x, y) {
     return false;
   }
 }
-
+var x=2;
+var y='2';
+sonIguales(x, y);
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
@@ -88,7 +100,9 @@ function tienenMismaLongitud(str1, str2) {
     return false;
   }
 }
-
+var str1='hola';
+var str2='adios';
+tienenMismaLongitud(str1, str2);
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
@@ -103,7 +117,8 @@ function menosQueNoventa(num) {
     return false
   }
 }
-
+var num=60;
+mayorQueCincuenta(num);
 
 function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
@@ -118,14 +133,17 @@ function mayorQueCincuenta(num) {
     return false
   }
 }
-
+var num=55;
+mayorQueCincuenta(num);
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
   return x%y;
 }
-
+var x=27;
+var y=3;
+obtenerResto(x, y)
 
 function esPar(num) {
   // Devuelve "true" si "num" es par
@@ -140,7 +158,8 @@ function esPar(num) {
     return false;
   }
 }
-
+var num=4;
+esPar(num);
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
@@ -155,7 +174,8 @@ function esImpar(num) {
     return true;
   }
 }
-
+var num=3;
+esImpar(num);
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
@@ -163,42 +183,48 @@ function elevarAlCuadrado(num) {
   // Tu código:
   return Math.pow(num,2);
 }
-
+var num=2;
+elevarAlCuadrado(num)
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
   return Math.pow(num,3);
 }
-
+var num=4;
+elevarAlCubo(num);
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
   return Math.pow(num,exponent);
 }
-
+var num=2;
+var exponent=5;
+elevar(num, exponent)
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
   return Math.round(num);
 }
-
+var num=6.5;
+redondearNumero(num);
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
   return Math.ceil(num);
 }
-
+var num=6.02;
+redondearHaciaArriba(num);
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
   return Math.random()
 }
-
+numeroRandom();
 
 function esPositivo(numero) {
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
@@ -218,7 +244,8 @@ function esPositivo(numero) {
     return 'Es negativo'
   }
 }
-
+var numero=6;
+esPositivo(numero);
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -226,7 +253,8 @@ function agregarSimboloExclamacion(str) {
   // Tu código:
   return str + '!';
 }
-
+var str='Que calor';
+agregarSimboloExclamacion(str)
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
@@ -234,7 +262,9 @@ function combinarNombres(nombre, apellido) {
   // Tu código:
   return nombre + ' ' + apellido;
 }
-
+var nombre='Soy';
+var apellido='Henry';
+combinarNombres(nombre, apellido);
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
@@ -242,7 +272,7 @@ function obtenerSaludo(nombre) {
   // Tu código:
   return 'Hola ' + nombre;
 }
-
+obtenerSaludo('Martin')
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
@@ -250,7 +280,9 @@ function obtenerAreaRectangulo(alto, ancho) {
   var area=alto*ancho;
   return area
 }
-
+var alto=4;
+var ancho=7;
+obtenerAreaRectangulo(alto, ancho);
 
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
@@ -258,7 +290,8 @@ function retornarPerimetro(lado){
   var perimetro=lado*4;
   return perimetro;
 }
-
+var lado=5;
+retornarPerimetro(lado);
 
 
 function areaDelTriangulo(base, altura){
@@ -267,7 +300,9 @@ function areaDelTriangulo(base, altura){
   var area=base*altura/2;
   return area;
 }
-
+var base=4;
+var altura=7;
+areaDelTriangulo(base, altura);
 
 
 function deEuroAdolar(euro){
@@ -276,7 +311,8 @@ function deEuroAdolar(euro){
   //Escribe tu código aquí
   return euro*1.2;
 }
-
+var euro=50;
+deEuroAdolar(euro);
 
 function esVocal(letra){
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
@@ -293,7 +329,9 @@ function esVocal(letra){
     return 'Dato incorrecto'
   }
 }
-
+var letra='b';
+String.prototype.toLowerCase(letra);
+esVocal(letra);
 
 // No modificar nada debajo de esta línea
 // --------------------------------
