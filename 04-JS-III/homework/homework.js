@@ -91,7 +91,7 @@ function promedioResultadosTest(resultadosTest) {
   for (let i = 0; i < array.length; i++) {
     suma=suma+resultadosTest[i];
   }
-  prom=suma/resultadosTest.length;
+  prom=suma/i;
   return prom;
 }
 
@@ -101,7 +101,7 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
   ultimo=numeros.length-1;
-  nuevoArr=sort(numeros);
+  nuevoArr=numeros.sort((a,b)=>a-b);
   masGrande=nuevoArr[ultimo];
   return masGrande;
 }
@@ -117,10 +117,15 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-  if(arreglo.length>18)
-  {
-    return arreglo.length;
+  contador=0
+  for (let i = 0; i < arreglo.length; i++) {
+    if(arreglo[i]>18)
+    {
+      contador++;
+    }
   }
+  return contador;
+
 }
 
 
@@ -145,8 +150,8 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  elArr=n.split('');
-  if(elArr[0]=== 9)
+  NuevoArr=Array.from(String(n),Number);
+  if(NuevoArr[0]==9)
   {
     return true;
   }
@@ -203,6 +208,7 @@ function mayorACien(array) {
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
   cont=0;
+  nuevoArr=[];
   for (let i = 0; i < array.length; i++) 
   {
     if(array[i]>100)
@@ -223,6 +229,7 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  array=[];
   for (let i = 0; i < 10; i++) 
   {
     numero=numero+2;
@@ -250,6 +257,7 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  array=[];
   cont=0;
   for (let i = 0; i < 10; i++) 
   {
