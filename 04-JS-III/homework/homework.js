@@ -91,7 +91,7 @@ function promedioResultadosTest(resultadosTest) {
   for (let i = 0; i < resultadosTest.length; i++) {
     suma=suma+resultadosTest[i];
   }
-  prom=suma/i;
+  prom=suma/resultadosTest.length;
   return prom;
 }
 
