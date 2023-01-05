@@ -268,13 +268,14 @@ function continueStatement(numero) {
   {
     if(i==5)
     {
-      array[i]=numero;
+      
       continue;
     }
     else
     {
       numero=numero+2;
-      array[i]=numero;
+      array[cont]=numero;
+      cont++
     }
   }
   return array
