@@ -88,7 +88,7 @@ function promedioResultadosTest(resultadosTest) {
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
   var suma=0;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < resultadosTest.length; i++) {
     suma=suma+resultadosTest[i];
   }
   prom=suma/i;
@@ -229,17 +229,22 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var ban=0;
   array=[];
   for (let i = 0; i < 10; i++) 
   {
-    numero=numero+2;
-    array[i]=numero;
     if(numero==i)
     {
+      ban=i;
       break;
     }
+    else
+    {
+      numero=numero+2;
+      array[i]=numero;
+    }
   }
-  if(i==numero)
+  if(ban==numero)
   {
     return "Se interrumpió la ejecución";
   }
@@ -263,6 +268,7 @@ function continueStatement(numero) {
   {
     if(i==5)
     {
+      array[i]=numero;
       continue;
     }
     else
