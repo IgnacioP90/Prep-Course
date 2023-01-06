@@ -7,9 +7,9 @@ function crearGato (nombre, edad) {
   // Devuelve el objeto
   // Tu código:
   var gato={nombre:nombre, edad:edad, meow:function(){
-    console.log("Meow!");
+    return "Meow!";
   }};
-  return gato;
+  return gato.meow();
 }
 
 function agregarPropiedad (objeto, property) {
@@ -26,7 +26,7 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  objeto.metodo();
+  objeto[metodo()];
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
@@ -51,7 +51,7 @@ function nuevoUsuario (nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-  var usuario={nombre:nombre, email:email, pass:password};
+  var usuario={nombre:nombre, email:email, password:password};
   return usuario;
 }
 
@@ -59,7 +59,14 @@ function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contrario, devuelve "false"
   // Tu código:
-  usuario.hasOwnProperty("email");
+  if(usuario["email"]==null)
+  {
+    return false;
+  }
+  else
+  {
+    return true;
+  }
 }
 
 function tienePropiedad (objeto, propiedad) {
@@ -142,12 +149,13 @@ function agregarMetodoCalculoDescuento (producto) {
   // Tu código:
   elPrecio=producto.precio;
   porcentaje=producto.porcentajeDeDescuento
-  var calcularPrecioDescuento= function calcularPrecioDescuento()
+  producto.precioConDescuento=function calcularPrecioDescuento()
   {
     des=elPrecio-(elPrecio*porcentaje) 
     return des 
   }
-  producto.descuento=calcularPrecioDescuento;
+  
+  producto.precioConDescuento();
   return producto;
 }
 // No modificar nada debajo de esta línea
