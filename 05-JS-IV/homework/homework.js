@@ -6,13 +6,11 @@ function crearGato (nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-  gato.nombre=nombre;
-  gato.edad=edad;
-  gato.meow=function(){
-    return "Meow!";
-  };
-  return gato.meow();
-  
+  var gato={nombre:nombre, edad:edad};
+      gato.meow=function(){
+        return "Meow!";
+      }
+      return gato;
 }
 
 function agregarPropiedad (objeto, property) {
